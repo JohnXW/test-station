@@ -1,0 +1,12 @@
+div.flex {
+	display: flex;
+}
+
+div.flex input[type='text'] {
+	flex-grow: 1;
+}
+
+div.flex textarea {
+	flex-grow: 1;
+	height: 20ex;
+}

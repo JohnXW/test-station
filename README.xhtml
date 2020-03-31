@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head><title>Read me</title></head>
+<body>
+	<section>
+		<h1>
+			Introduction
+		</h1>
+		<p>
+			This is the website of Station.
+		</p>
+	</section>
+	<section>
+		<h1>
+			Installation
+		</h1>
+		<p>
+			Install database <a href="https://www.postgresql.org/">PostgreSQL</a>.
+		</p>
+		<p>
+			Install Haskell compiler <a href="https://www.haskell.org/ghc/">GHC</a> and package installer
+			<a href="https://www.haskell.org/cabal/index.html">cabal-install</a>.
+		</p>
+	</section>
+	<section>
+		<h1>
+			Environment variables
+		</h1>
+		<p>
+			<table>
+				<thead>
+					<th>Variable</th>
+					<th>Type</th>
+					<th>Default</th>
+					<th>Description</th>
+				</thead>
+				<tbody>
+					<tr>
+						<td>PORT</td>
+						<td>number</td>
+						<td>8000</td>
+						<td>Socket port to listen on</td>
+					</tr>
+					<tr>
+						<td>DATABASE_URL</td>
+						<td>connection string</td>
+						<td></td>
+						<td>PostgreSQL database to use</td>
+					</tr>
+					<tr>
+						<td>LOG</td>
+						<td>True / False</td>
+						<td>False</td>
+						<td>Display log messages</td>
+					</tr>
+				</tbody>
+			</table>
+		</p>
+	</section>
+	<section>
+		<h1>
+			Initialize database
+		</h1>
+		<p>
+			Command line:
+			<br/>
+			<code>psql $DATABASE_URL &lt; sql/setup.sql</code>
+		</p>
+	</section>
+	<section>
+		<h1>
+			Execution
+		</h1>
+		<p>
+			Command line:
+			<br/>
+			<code>cabal v2-run</code>
+		</p>
+	</section>
+</body>
+</html>

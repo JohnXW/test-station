@@ -1,0 +1,55 @@
+cabal-version: 1.12
+
+name:          station
+version:       1.1.1
+description:   Website of Station
+category:      Web
+author:        LEE Chun Kin
+copyright:     2019, LEE Chun Kin
+license:       GPL-2
+build-type:    Simple
+
+executable station
+  default-language: Haskell2010
+  default-extensions: LambdaCase NegativeLiterals OverloadedStrings
+  ghc-options: -Wall -Wno-tabs -threaded -rtsopts -with-rtsopts=-N
+  hs-source-dirs: bin
+  main-is: station.hs
+  other-modules:
+    Station.Constant
+    Station.Constant.Role
+    Station.XML
+    Station.Database
+    Station.Database.User
+    Station.Database.Session
+    Station.Database.Subject
+    Station.Database.Course
+    Station.Database.Lesson
+    Station.Database.Question
+    Station.Database.Answer
+    Station.Database.Work
+    Station.HTTP
+    Station.Web
+    Station.Web.Tool
+    Station.Web.Session
+    Station.Web.Public
+    Station.Web.SysOp
+    Station.Web.Learn
+  build-depends:
+    base,
+    bytestring,
+    binary,
+    utf8-string,
+    filepath,
+    directory,
+    time,
+    xml,
+    scrypt,
+    text,
+    http-types,
+    cookie,
+    wai,
+    wai-extra,
+    wai-app-static,
+    warp,
+    postgresql-simple
