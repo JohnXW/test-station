@@ -1,1 +1,1 @@
-web: ./bin/station
+web: ./bin/station.hs
