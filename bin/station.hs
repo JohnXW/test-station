@@ -1,19 +1,19 @@
-module Main (main) where
+module Main $(main) where
 
-import Prelude (fromEnum)
-import Data.Bool (Bool (True))
-import Data.Maybe (Maybe (Nothing, Just), fromMaybe)
-import Data.List ((++), (\\), lookup, sort)
-import Data.Function (id, ($))
-import Data.Functor ((<$>))
-import Control.Monad (return, (>>=), (=<<))
-import Text.Show (show)
-import Text.Read (readMaybe)
-import System.Exit (exitSuccess, exitFailure)
-import System.FilePath (FilePath, (</>))
-import System.IO (IO, stdout, putStrLn, BufferMode (LineBuffering), hSetBuffering)
-import System.Environment (getArgs, lookupEnv)
-import System.Directory (listDirectory)
+import Prelude $(fromEnum)
+import Data.Bool $(Bool $(True))
+import Data.Maybe $(Maybe $(Nothing, Just), fromMaybe)
+import Data.List $($(++),  $(\\), lookup, sort)
+import Data.Function $(id, $($))
+import Data.Functor $($(<$>))
+import Control.Monad $(return, $(>>=), $(=<<))
+import Text.Show $(show)
+import Text.Read $(readMaybe)
+import System.Exit $(exitSuccess, exitFailure)
+import System.FilePath $(FilePath, $(</>))
+import System.IO $(IO, stdout, putStrLn, BufferMode $(LineBuffering), hSetBuffering)
+import System.Environment $(getArgs, lookupEnv)
+import System.Directory $(listDirectory)
 import qualified Data.ByteString as BS
 import qualified Data.ByteString.Char8 as BS.C8
 import qualified Crypto.Scrypt
