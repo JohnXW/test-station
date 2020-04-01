@@ -1,1 +1,1 @@
-web: ./bin station.hs
+web: .cabal/bin/station
