@@ -10,26 +10,61 @@
 	<html>
 		<head>
 			<title>Station - Course</title>
-			<link rel="stylesheet" type="text/css" href="/base.css"/>
+			<xsl:call-template name='header-head'/>
+			<link rel="stylesheet" href="../course.css"/>
 		</head>
 		<body>
-			<xsl:call-template name='menubar'/>
-			<a>
-				<xsl:attribute name='href'>../subject/<xsl:value-of select='subject'/></xsl:attribute>
-				Back to subject
-			</a>
-			<h1><xsl:value-of select='title'/></h1>
-			<pre><xsl:value-of select='description'/></pre>
-			<h1>Lessons</h1>
-			<xsl:for-each select='lessons/lesson'>
-				<p>
-					<xsl:value-of select='number'/>.
-					<a>
-						<xsl:attribute name='href'>../lesson/<xsl:value-of select='identifier'/></xsl:attribute>
-						<xsl:value-of select='title'/>
-					</a>
-				</p>
-			</xsl:for-each>
+			<header>
+				<xsl:call-template name='menubar'/>
+			</header>
+			<div class="container-content">
+				<div class="container-title">
+					<div class="btn-back">
+						<a>
+							<xsl:attribute name='href'>../subject/<xsl:value-of select='subject'/></xsl:attribute>
+							<span>X</span>
+						</a>
+					</div>
+					<div class="course-title">
+						<span>XML</span>
+					</div>
+				</div>
+				<div class="content">
+					<div class="container-lesson">
+						<div class="session-title">
+							<span>Lessons</span>
+						</div>
+						<div class="lesson-list">
+							<xsl:for-each select='lessons/lesson'>
+								<a>
+									<xsl:attribute name='href'>../lesson/<xsl:value-of select='identifier'/></xsl:attribute>
+									<div class="lesson">
+										<div class="lesson-order">
+											<span><xsl:value-of select='number'/></span>
+										</div>
+										<div class="lesson-title">
+											<span><xsl:value-of select='title'/></span>
+										</div>
+									</div>
+								</a>
+							</xsl:for-each>
+						</div>
+						<div class="report">
+							<a href="">
+								<span>Report a mistake</span>
+							</a>
+						</div>
+					</div>
+					<div class="container-intro">
+						<div class="session-title">
+							<span>Introduction</span>
+						</div>
+						<div class="content">
+							<span><xsl:value-of select='description'/></span>
+						</div>
+					</div>
+				</div>
+			</div>
 		</body>
 	</html>
 </xsl:template>

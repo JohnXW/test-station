@@ -15,11 +15,11 @@
 	<hr/>
 </xsl:template>
 <xsl:template name='header-head'>
-	<link rel='stylesheet' type='text/css' href='/global.css'/>
-	<link rel='stylesheet' type='text/css' href='/font-family.css'/>
-	<link rel='stylesheet' type='text/css' href='/header.css'/>
-	<link rel='stylesheet' type='text/css' href='/slide-show.css'/>
-	<script type='application/ecmascript' src='/menu.js'></script>
+	<link rel='stylesheet' type='text/css' href='/public/global.css'/>
+	<link rel='stylesheet' type='text/css' href='/public/font-family.css'/>
+	<link rel='stylesheet' type='text/css' href='/public/header.css'/>
+	<link rel='stylesheet' type='text/css' href='/public/slide-show.css'/>
+	<script type='application/ecmascript' src='/public/menu.js'></script>
 </xsl:template>
 <xsl:template name='header'>
 	<header>
@@ -28,12 +28,12 @@
 				<div class='logo align-bot'>
 					<div class='sponsor'>
 						<a href='https://www.collaction.hk/s/station/'>
-							<img src='/station_logo_black.png'/>
+							<img src='/public/station_logo_black.png'/>
 						</a>
 					</div>
 					<div class='sponsor'>
 						<a href='https://www.eatonworkshop.com/hotel/hong-kong'>
-							<img class='vice-sponsor' src='/eaton_logo_black.png'/>
+							<img class='vice-sponsor' src='/public/eaton_logo_black.png'/>
 						</a>
 					</div>
 				</div>
@@ -64,13 +64,13 @@
 		<div class='menu-content'>
 			<ul>
 				<li><a href='/home'>Home</a></li>
-				<li><a href=''>Station for Open Cultures</a></li>
+				<li><a href='https://www.collaction.hk/s/station/'>Station for Open Cultures</a></li>
 				<li><a href='https://www.eatonworkshop.com/hotel/hong-kong'>EatonHK</a></li>
-				<li><a href=''>g0vhk</a></li>
+				<li><a href='https://g0vhk.io/'>g0vhk</a></li>
 				<li><a href='/account'>My Account</a></li>
 				<xsl:if test='session/role="SysOp"'>
 					<li><a href='/sysop/account'>Account Management</a></li>
-					<li><a href='/sysop/account'>Lesson Management</a></li>
+					<li><a href='/sysop/subjects'>Lesson Management</a></li>
 				</xsl:if>
 				<li><a href='/public/logout'>Log Out</a></li>
 			</ul>
@@ -78,24 +78,24 @@
 	</header>
 </xsl:template>
 <xsl:template name='slide-head'>
-	<script type='application/ecmascript' src='/slider.js'></script>
+	<script type='application/ecmascript' src='/public/slider.js'></script>
 </xsl:template>
 <xsl:template name='slide'>
 	<div class='container-slide-show' onmouseover='stopAutoSlide()' onmouseout='contineSlide()'>
 		<div class='slide'>
-			<a href=''><img src='/slide/1.jpg'/></a>
+			<a href=''><img src='/public/slide/1.jpg'/></a>
 		</div>
 		<div class='slide'>
-			<a href=''><img src='/slide/2.jpg'/></a>
+			<a href=''><img src='/public/slide/2.jpg'/></a>
 		</div>
 		<div class='slide'>
-			<a href=''><img src='/slide/1.jpg'/></a>
+			<a href=''><img src='/public/slide/1.jpg'/></a>
 		</div>
 		<div class='slide'>
-			<a href=''><img src='/slide/2.jpg'/></a>
+			<a href=''><img src='/public/slide/2.jpg'/></a>
 		</div>
 		<div class='slide'>
-			<a href=''><img src='/slide/1.jpg'/></a>
+			<a href=''><img src='/public/slide/1.jpg'/></a>
 		</div>
 		<div class='container-btn-slide'>
 			<span class='btn-slide' onclick='setShowImgIndex(0)'></span>
