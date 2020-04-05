@@ -14,9 +14,7 @@
 			<link rel="stylesheet" href="../course.css"/>
 		</head>
 		<body>
-			<header>
-				<xsl:call-template name='menubar'/>
-			</header>
+			<xsl:call-template name='header'/>
 			<div class="container-content">
 				<div class="container-title">
 					<div class="btn-back">

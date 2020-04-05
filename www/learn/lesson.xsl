@@ -4,13 +4,14 @@
 	xmlns:xsl='http://www.w3.org/1999/XSL/Transform'
 	xmlns='http://www.w3.org/1999/xhtml'
 >
-<xsl:import href='../menubar.xsl'/>
+<xsl:import href='/menubar.xsl'/>
 <xsl:output method='xml' version='1.0' encoding='UTF-8' indent='yes'/>
 <xsl:template match='/lesson'>
 	<html>
 		<head>
 			<title>Station - Lesson</title>
 			<link rel="stylesheet" href="../lesson.css"/>
+			<xsl:call-template name='header-head'/>
 			<script type='application/ecmascript' src="../swap.js"  async='' />
 			<script type='application/ecmascript' src='../lesson.js' async=''/>
 		</head>
