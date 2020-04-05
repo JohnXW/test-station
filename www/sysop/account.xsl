@@ -30,7 +30,7 @@
 										<span>Name</span>
 									</div>
 									<div class="attribute-value">
-										<input class="value" type="text" />
+										<input class="value" type="text" name='name' />
 									</div>
 								</div>
 								<div class="account-attribute attribute">
@@ -87,7 +87,7 @@
 											<span>Mark</span>
 										</div>
 										<div class="attribute-value">
-											<input class="value" type="number">
+											<input class="value" type="number" name='mark'>
 												<xsl:attribute name='value'>
 													<xsl:value-of select='@mark'/>
 												</xsl:attribute>
