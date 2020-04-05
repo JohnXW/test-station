@@ -10,10 +10,10 @@
 	<html>
 		<head>
 			<title>Station - Lesson</title>
-			<link rel="stylesheet" href="../lesson.css"/>
 			<xsl:call-template name='header-head'/>
 			<script type='application/ecmascript' src="../swap.js"  async='' />
 			<script type='application/ecmascript' src='../lesson.js' async=''/>
+			<link rel="stylesheet" href="../lesson.css"/>
 		</head>
 		<body>
 			<xsl:call-template name='header'/>

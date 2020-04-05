@@ -50,7 +50,7 @@ input[type=checkbox] + .btn-swap{
     padding: 0 0 0 0px;
     background-size: contain;
     background-origin: content-box;
-    background-image: url("../Image/swap.png");
+    background-image: url("./swap.png");
     background-repeat: no-repeat;
     transition: all 0.2s;
 }
