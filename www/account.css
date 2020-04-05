@@ -49,7 +49,7 @@
     position:relative;
 }
 .select select#role {
-    background-image:url(role.png);
+    background-image:url("./sysop/role.png");
     background-repeat: no-repeat;
     background-size: contain;
     background-origin: content-box;
@@ -61,7 +61,7 @@
 }
 .select::after{
     content:"";
-    background-image: url(arrow.png);
+    background-image: url("./sysop/arrow.png");
     font-size:0.5em;
     font-family:arial;
     position:absolute;
@@ -111,11 +111,11 @@ input[type=checkbox] + .btn-lock{
     padding: 0 0 0 0px;
     background-size: contain;
     background-origin: content-box;
-    background-image: url("lock.png");
+    background-image: url("./sysop/lock.png");
     background-repeat: no-repeat;
 }
 input[type=checkbox]:checked + .btn-lock{
-    background-image: url("unlock.png");
+    background-image: url("./sysop/unlock.png");
 }
 input[type=checkbox] + .btn-remove{
     cursor: pointer;
@@ -125,11 +125,11 @@ input[type=checkbox] + .btn-remove{
     padding: 0 0 0 0px;
     background-size: contain;
     background-origin: content-box;
-    background-image: url("remove.png");
+    background-image: url("./sysop/remove.png");
     background-repeat: no-repeat;
 }
 input[type=checkbox]:checked + .btn-remove{
-    background-image: url("remove.png");
+    background-image: url("./sysop/remove.png");
 	opacity: 0.5;
 }
 .btn-submit{
