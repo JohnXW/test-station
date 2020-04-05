@@ -50,59 +50,61 @@
 							</div>
 						</div>
 					</div>
-					<div class="container-question content-content">
-						<div class="session-title">
-							<span>Questions</span>
-						</div>
-						<form method="POST">
-							<xsl:for-each select='questions/question'>
-								<div class="content-question content-container">
-									<div class="question-text">
-										<span>
-											Q<xsl:value-of select='number'/>. <xsl:value-of select='text'/>
-										</span>
-										<div class="mark">
+					<xsl:if test='count(questions/question)!=0'>
+						<div class="container-question content-content">
+							<div class="session-title">
+								<span>Questions</span>
+							</div>
+							<form method="POST">
+								<xsl:for-each select='questions/question'>
+									<div class="content-question content-container">
+										<div class="question-text">
 											<span>
-												Full mark: 
-												<xsl:value-of select='mark'/> point<xsl:if test='mark!=1'>s</xsl:if>
+												Q<xsl:value-of select='number'/>. <xsl:value-of select='text'/>
 											</span>
+											<div class="mark">
+												<span>
+													Full mark: 
+													<xsl:value-of select='mark'/> point<xsl:if test='mark!=1'>s</xsl:if>
+												</span>
+											</div>
+										</div>
+										<div class="container-answer">
+											<xsl:for-each select='answers/answer'>
+												<div class="answer">
+													<label class="answer-radio">
+														<input type="radio" required=''>
+															<xsl:attribute name='name'>
+																<xsl:value-of select='../../identifier'/>
+															</xsl:attribute>
+															<xsl:attribute name='value'>
+																<xsl:value-of select='identifier'/>
+															</xsl:attribute>
+															<xsl:if test='@answered'>
+																<xsl:attribute name='checked'/>
+															</xsl:if>
+														</input>
+														<xsl:value-of select='text'/>
+														<span></span>
+													</label>
+													<xsl:if test='@answered'>
+														<span>
+															(<xsl:value-of select='@answered'/> point<xsl:if test='@answered!=1'>s</xsl:if>)
+														</span>
+													</xsl:if>
+												</div>
+											</xsl:for-each>
 										</div>
 									</div>
-									<div class="container-answer">
-										<xsl:for-each select='answers/answer'>
-											<div class="answer">
-												<label class="answer-radio">
-													<input type="radio" required=''>
-														<xsl:attribute name='name'>
-															<xsl:value-of select='../../identifier'/>
-														</xsl:attribute>
-														<xsl:attribute name='value'>
-															<xsl:value-of select='identifier'/>
-														</xsl:attribute>
-														<xsl:if test='@answered'>
-															<xsl:attribute name='checked'/>
-														</xsl:if>
-													</input>
-													<xsl:value-of select='text'/>
-													<span></span>
-												</label>
-												<xsl:if test='@answered'>
-													<span>
-														(<xsl:value-of select='@answered'/> point<xsl:if test='@answered!=1'>s</xsl:if>)
-													</span>
-												</xsl:if>
-											</div>
-										</xsl:for-each>
+								</xsl:for-each>
+								<div class="container-submit">
+									<div class="btn-submit">
+										<input type='submit' value='Submit'/>
 									</div>
 								</div>
-							</xsl:for-each>
-							<div class="container-submit">
-								<div class="btn-submit">
-									<input type='submit' value='Submit'/>
-								</div>
-							</div>
-						</form>
-					</div>
+							</form>
+						</div>
+					</xsl:if>
 				</div>
 			</div>
 		</body>
